@@ -1,4 +1,3 @@
-
 def siteUrl = 'https://github.com/Jude95/RollViewPager'      // 项目的主页
 def gitUrl = 'https://github.com/Jude95/RollViewPager'   // Git仓库的url
 
@@ -47,7 +46,7 @@ artifacts {
 
 android.libraryVariants.all { variant ->
     println variant.javaCompile.classpath.files
-    if(variant.name == 'release') { //我们只需 release 的 javadoc
+    if (variant.name == 'release') { //我们只需 release 的 javadoc
         task("generate${variant.name.capitalize()}Javadoc", type: Javadoc) {
             // title = ''
             // description = ''

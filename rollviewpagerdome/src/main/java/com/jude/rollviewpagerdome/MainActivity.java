@@ -13,22 +13,24 @@ import com.jude.rollviewpager.adapter.DynamicPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private RollPagerView mRollViewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRollViewPager= (RollPagerView) findViewById(R.id.roll_view_pager);
+        mRollViewPager = (RollPagerView) findViewById(R.id.roll_view_pager);
         mRollViewPager.setAnimationDurtion(1000);
         mRollViewPager.setAdapter(new TestAdapter());
     }
 
-    private class TestAdapter extends DynamicPagerAdapter{
+    private class TestAdapter extends DynamicPagerAdapter {
         private int[] imgs = {
                 R.drawable.img1,
                 R.drawable.img2,
                 R.drawable.img3,
                 R.drawable.img4,
         };
+
         @Override
         public View getView(ViewGroup container, int position) {
             ImageView view = new ImageView(container.getContext());
